@@ -9,8 +9,8 @@ def subject_card(name, code, section, stats=None, footer_callback=None):
 
     if stats:
         html += '<div style="display: flex; gap: 8px; flex-wrap: wrap;">'
-        for label, value in stats:
-            html += f'<div style="background-color: white; padding: 6px 10px; border-radius: 6px; font-size: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);"><b>{value}</b> {label}</div>'
+        for icon,label, value in stats:
+            html += f'<div style="background-color: white; padding: 6px 10px; border-radius: 6px; font-size: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">{icon} <b>{value}</b> {label}</div>'
         html += "</div>"
 
     html += "</div>"

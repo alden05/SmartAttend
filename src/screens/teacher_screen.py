@@ -47,12 +47,12 @@ def teacher_dashboard():
             st.rerun()
     with tab2:
         type2="primary" if st.session_state.current_teacher_tab=='manage_subjects' else 'secondary'
-        if st.button("Manage Subjects",type=type2,width="stretch",icon=":material/ar_on_you:"):
+        if st.button("Manage Subjects",type=type2,width="stretch",icon=":material/book_ribbon:"):
             st.session_state.current_teacher_tab='manage_subjects'
             st.rerun()
     with tab3:
         type3="primary" if st.session_state.current_teacher_tab=='attendance_records' else 'secondary'
-        if st.button("Attendance Records",type=type3,width="stretch",icon=":material/ar_on_you:"):
+        if st.button("Attendance Records",type=type3,width="stretch",icon=":material/cards_stack:"):
             st.session_state.current_teacher_tab='attendance_records'
             st.rerun()
     
@@ -85,8 +85,8 @@ def teacher_tab_manage_subjects():
     if subjects:
         for sub in subjects:
             stats=[
-                ("Students",sub['total_students']),
-                ("Classes",sub['total_classes'])
+                ('👨‍🎓',"Students",sub['total_students']),
+                ('🗓️',"Classes",sub['total_classes'])
             ]
             def share_btn():
                 if st.button(f"Share Code: {sub['name']}",key=f"share_{sub['subject_code']}",icon=":material/share:"):

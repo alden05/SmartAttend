@@ -60,6 +60,7 @@ def style_base_layout():
                     font-size: 3rem !important;
                     line-height: 1.1 !important;
                     margin-bottom: 0rem !important;
+                    color:#213448 !important;
                 
                 }
                 h2{
@@ -67,6 +68,8 @@ def style_base_layout():
                     font-size: 1.5rem !important;
                     line-height: 0.9 !important;
                     margin-bottom: 0rem !important;
+                    color:#213448 !important;
+                
                 
                 }
                 h3,h4,p{
