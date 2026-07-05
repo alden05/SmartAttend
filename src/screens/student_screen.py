@@ -10,7 +10,25 @@ import numpy as np
 import time
 
 def student_dashboard():
-    st.header("STUDENT DASHBOARD HAHAHA")
+    student_data=st.session_state.student_data
+    col1,col2 = st.columns(2, vertical_alignment='center',gap='xxlarge')
+    with col1:
+        header_dashboard()
+    with col2:
+        
+        if st.button("Logout", type='primary',key="loginbackbtn", shortcut="control+backspace"):
+            st.session_state['is_logged_in']=False
+            del st.session_state.student_data
+            st.rerun()
+
+    st.space()
+
+    st.subheader(f"Welcome,{student_data["name"]}")
+
+    st.space()
+
+    footer_dashboard()
+    
 def student_screen():
     style_background_dashboard()
     style_base_layout()
