@@ -38,10 +38,14 @@ def teacher_dashboard():
             st.session_state['is_logged_in']=False
             del st.session_state.teacher_data
             st.rerun()
+    
+    st.divider()
 
-    st.space()
 
-    st.subheader(f"Welcome,{teacher_data["name"]}")
+    st.markdown(
+        f'<h2 style="text-align: center;">Welcome {teacher_data["name"]} !</h2>', 
+        unsafe_allow_html=True
+    )
 
     st.space()
 
@@ -273,11 +277,14 @@ def teacher_screen_login():
             st.session_state['login_type']=None
             st.rerun()
     
-    st.header('Login using password',text_alignment='center')
-    st.space()
-    teacher_username=st.text_input("Enter Username", placeholder='Pranjli Aggarwal')
-    teacher_password=st.text_input("Enter Password",type='password',placeholder='Enter Password')
     st.divider()
+    st.header('Login using password',text_alignment='center')
+    
+    teacher_username=st.text_input("Enter Username", placeholder='@johndoe')
+    teacher_password=st.text_input("Enter Password",type='password',placeholder='example$123')
+
+    st.space()
+    
     btnc1,btnc2=st.columns(2)
     with btnc1:
         if st.button('Login',type='primary',icon=':material/passkey:',shortcut='control+enter',width='stretch'):
@@ -321,15 +328,15 @@ def teacher_screen_register():
             st.session_state['login_type']=None
             st.rerun()
     
+    st.divider()
+    
     st.header('Register your Teacher Profile',text_alignment='center')
 
-    st.space()
-    st.space()
-    teacher_username=st.text_input("Enter Username", placeholder='pranjli07')
-    teacher_name=st.text_input("Enter Name", placeholder='Pranjli Aggarwal')
-    teacher_password=st.text_input("Enter Password",type='password',placeholder='Enter Password')
-    teacher_password_confirm=st.text_input("Confirm your Password",type='password',placeholder='Confirm Password')
-    st.divider()
+    teacher_username=st.text_input("Enter Username", placeholder='@johndoe')
+    teacher_name=st.text_input("Enter Name", placeholder='John Doe')
+    teacher_password=st.text_input("Enter Password",type='password',placeholder='example$123')
+    teacher_password_confirm=st.text_input("Confirm your Password",type='password',placeholder='example$123')
+    
     btnc1,btnc2=st.columns(2)
     with btnc1:
         if st.button('Register Now',type='primary',icon=':material/passkey:',shortcut='control+enter',width='stretch'):

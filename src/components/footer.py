@@ -17,7 +17,7 @@ def footer_dashboard():
     logo_url="https://github.com/shradha-khapra/ai-attendance-project-landing/blob/main/static/img/logo.png?raw=true"
     st.markdown("""
             <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom:30px; margin-top:30px">
-                <p style="color:#213448"><b>© 2026 • Built by Pranjli & Alden</b></p>
+                <p style="font-weight:bold;color:#213448; opacity:0.6;"><b>© 2026 • Built by Pranjli & Alden</b></p>
             </div>
             
                 

@@ -1,11 +1,16 @@
 import streamlit as st
-
+from PIL import Image
 
 from src.screens.home_screen import home_screen
 from src.screens.teacher_screen import teacher_screen
 from src.screens.student_screen import student_screen
 from src.components.dialog_auto_enroll import auto_enroll_dialog
 def main():
+    icon = Image.open("src/image/logo_final.png")
+    st.set_page_config(
+        page_title='SmartAttend- AI Powered Attendance System',
+        page_icon=icon
+    )
 
     
 

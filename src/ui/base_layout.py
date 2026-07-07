@@ -40,73 +40,90 @@ def style_background_dashboard():
 
 
 def style_base_layout():
-    st.markdown("""
+     st.markdown("""
         <style>
-                @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap');
-                @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-               
-                /* Hide Top bar of Streamlit */
+                @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 
-                # #MainMenu, footer, header {
-                #     visibility: hidden;
-                # }
+                /* Hide Toolbar */
+                #MainMenu, footer, header{
+                    visibility: hidden;
+                }
 
                 .block-container{
-                    padding-top:1.5rem !important;
+                    padding-top: 1.5rem !important;
                 }
 
                 h1{
-                    font-family: 'Climate Crisis', sans-serif !important;
-                    font-size: 3rem !important;
+                    font-family: "Fraunces", serif !important;
+                    font-weight: 900 !important;
+                    font-size: 3.2rem !important;
                     line-height: 1.1 !important;
                     margin-bottom: 0rem !important;
-                    color:#213448 !important;
-                
+                    color: #213448 !important;
                 }
+
                 h2{
-                    font-family: 'Climate Crisis', sans-serif !important;
-                    font-size: 1.5rem !important;
-                    line-height: 0.9 !important;
+                    font-family: "Fraunces", serif !important;
+                    font-weight: 900 !important;
+                    font-size: 1.8rem !important;
+                    line-height: 1.1 !important;
                     margin-bottom: 0rem !important;
-                    color:#213448 !important;
-                
-                
+                    color: #213448 !important;
                 }
-                h3,h4,p{
-                    font-family: 'Outfit', sans-serif;
+                
+                h3, h4, p{
+                    font-family: "Urbanist", sans-serif !important;
                 }
-                button
-                {
-                    border-radius:1.5rem !important;
+
+                button{
+                    border-radius: 1.5rem !important;
                     background-color: #213448 !important;
                     color: white !important;
                     padding: 10px 20px !important;
                     border: none !important;
                     transition: transform 0.25s ease-in-out !important;
                 }
-                button[kind="secondary"]
-                {
-                    border-radius:1.5rem !important;
+
+                button[kind="secondary"]{
+                    border-radius: 1.5rem !important;
                     background-color: #547792 !important;
                     color: white !important;
                     padding: 10px 20px !important;
                     border: none !important;
                     transition: transform 0.25s ease-in-out !important;
                 }
-                button[kind="tertiary"]
-                {
-                    border-radius:1.5rem !important;
-                    background-color:black !important;
+
+
+                button[kind="tertiary"]{
+                    border-radius: 1.5rem !important;
+                    background-color: black !important;
                     color: white !important;
                     padding: 10px 20px !important;
                     border: none !important;
                     transition: transform 0.25s ease-in-out !important;
                 }
+
                 button:hover{
-                    transform: scale(1.05)
+                    transform: scale(1.05);
+                }
+                 
+                 /* Toast notifications */
+                div[data-testid="stToast"] {
+                    background-color: #faf3e8 !important;
+                    color: #213448 !important;
+                    border-radius: 1rem !important;
+                    box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
+                }
+                 
+                 div[data-testid="stDataFrame"] {
+                    background-color: #faf3e8 !important;
+                    border-radius: 0.5rem !important;
+                    padding: 0.5rem !important;
+                    box-shadow: 0 6px 20px rgba(0,0,0,0.08) !important;
                 }
 
+
         </style>
-
-
-                """,unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
